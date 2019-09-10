@@ -22,7 +22,7 @@ class Login extends React.Component  {
               <h2>Login</h2>
                 <SingleTextInput name="email" value={this.state.email} type="email" placeholder="email" valueChange={this.valueChange} />
                 <SingleTextInput name="password" value={this.state.password} type="password" placeholder="password" valueChange={this.valueChange}/>
-                <input className="btn btn-primary mt-2 " type="submit" value="Login"></input>
+                <input className="btn btn-primary mt-2" type="submit" value="Login"></input>
                 </form>
            )
     }
