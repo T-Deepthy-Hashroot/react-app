@@ -11,8 +11,8 @@ class SingleTextInput extends React.Component {
     render() { 
         return ( 
                 <div>
-                    <label>{this.props.name}</label>
-                  <input name={this.props.name} type={this.props.type} className="form-control col-lg-2 col-md-2" value={this.props.value} placeholder={this.props.placeholder}
+                    <label>{this.props.label}</label>
+                  <input name={this.props.name} type={this.props.type} className="form-control col-md-9" value={this.props.value} placeholder={this.props.placeholder}
                    onChange={this.changeInTextField} /> 
                 </div>   
   
