@@ -1,0 +1,7 @@
+export default { 
+    email: '',
+    firstName: '',
+    lastName: '',
+    password: '',
+    passwordConfirmation: ''
+}

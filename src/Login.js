@@ -20,8 +20,8 @@ class Login extends React.Component  {
         return (
             <form className="col-lg-6 offset-lg-3 p-4">
               <h2>Login</h2>
-                <SingleTextInput name="email" value={this.state.email} type="email" placeholder="email" valueChange={this.valueChange} />
-                <SingleTextInput name="password" value={this.state.password} type="password" placeholder="password" valueChange={this.valueChange}/>
+                <SingleTextInput name="email" value={this.state.email} type="email" placeholder="email" valueChange={this.valueChange} label="Email"/>
+                <SingleTextInput name="password" value={this.state.password} type="password" placeholder="password" valueChange={this.valueChange} label="Password"/>
                 <input className="btn btn-primary mt-2" type="submit" value="Login"></input>
                 </form>
            )
