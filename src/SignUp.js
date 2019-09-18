@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-undef */
 import React from 'react';
 import './App.css';
 import { Link } from "react-router-dom";
@@ -10,8 +9,8 @@ class SignUp extends React.Component  {
         super(props);
         this.state = {
           email: '',
-          firstName: '',
-          lastName: '',
+          name: '',
+          userName: '',
           password: '',
           passwordConfirmation: ''
         }
@@ -25,8 +24,8 @@ class SignUp extends React.Component  {
                 <form className="col-lg-6 offset-lg-3 p-4">  
                 <h2>SignUp</h2>          
                 <SingleTextInput name="email" value={this.state.email} type="email" placeholder="email" valueChange={this.valueChange} label="Email" />
-                <SingleTextInput name="firstName" value={this.state.firstName} type="text" placeholder="First Name" valueChange={this.valueChange} label="First Name" />
-                <SingleTextInput name="lastName" value={this.state.lastName} type="text" placeholder="Last Name" valueChange={this.valueChange} label="Last Name" />
+                <SingleTextInput name="name" value={this.state.firstName} type="text" placeholder="Name" valueChange={this.valueChange} label="Name" />
+                <SingleTextInput name="userName" value={this.state.lastName} type="text" placeholder="User Name" valueChange={this.valueChange} label="User Name" />
                 <SingleTextInput name="password" value={this.state.password} type="password" placeholder="Password" valueChange={this.valueChange} label="Password" />
                 <SingleTextInput name="passwordConfirmation" value={this.state.passwordConfirmation} type="password" placeholder="Password Confirmation" valueChange={this.valueChange} label="Password Confirmation" />
                 <input className="btn btn-primary mt-2" type="submit" value="Sign Up"></input>
