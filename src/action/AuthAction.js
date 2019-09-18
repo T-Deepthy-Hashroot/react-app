@@ -7,7 +7,7 @@ import _ from 'lodash'
 
 
 export const signupAction = (payload) => {
-    console.log(payload)
+    console.log("payload from action",payload)
     // return (dispatch) => {
     //     dispatch({
     //         type: types.FOOD_ADD_REQUEST,
