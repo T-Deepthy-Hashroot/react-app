@@ -43,20 +43,19 @@ class SignUp extends React.Component  {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     signUp: (props) => {
-      console.log("props...." , props);
-      console.log("dispatch in signup", dispatch);
       dispatch(signupAction(props))
     }
   }
 }
 const mapStateToProps = (state, ownProps) => {
-  console.log(state)
+  console.log("state from reducer" , state.main)
   return {
-    foodItemState: state.main.authReducer
+    signUpState: state.main.authReducer
   }
 }
 
 
 export default connect(
-  mapDispatchToProps, mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(SignUp);

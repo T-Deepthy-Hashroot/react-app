@@ -1,6 +1,6 @@
 import * as types from '../constants'
 const INITIAL_STATE = { data: [], error: null, loading: false, status: null }
-export default (state = INITIAL_STATE, action) => {
+const authReducer =   (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case types.SIGN_UP_REQUEST:
             return {
@@ -28,3 +28,4 @@ export default (state = INITIAL_STATE, action) => {
     }
 
 }
+export default authReducer;
