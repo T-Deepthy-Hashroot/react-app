@@ -37,8 +37,6 @@ class SignUp extends React.Component  {
                   <button className="btn btn-primary mt-2" type="submit" onClick={this.handleSubmit}>Sign Up</button>
                   <Link to="login" className="ml-2 mt-2">Login</Link>   
                 </form>
-           
-            
            )
     }
 }
@@ -46,13 +44,19 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     signUp: (props) => {
       console.log("props...." , props);
-      console.log("ownprops" , ownProps);
+      console.log("dispatch in signup", dispatch);
       dispatch(signupAction(props))
     }
+  }
+}
+const mapStateToProps = (state, ownProps) => {
+  console.log(state)
+  return {
+    foodItemState: state.main.authReducer
   }
 }
 
 
 export default connect(
-  mapDispatchToProps
+  mapDispatchToProps, mapStateToProps
 )(SignUp);

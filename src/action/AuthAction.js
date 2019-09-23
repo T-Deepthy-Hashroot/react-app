@@ -7,26 +7,27 @@ import _ from 'lodash'
 
 
 export const signupAction = (payload) => {
-    console.log("payload from action",payload)
-    // return (dispatch) => {
-    //     dispatch({
-    //         type: types.FOOD_ADD_REQUEST,
-    //     })
-    //     axios.post(config.SERVER_API_URL+"food/",payload )
-    //         .then(function (response) {
-    //             dispatch({
-    //                 type: types.FOOD_ADD_SUCCESS,
-    //                 response
-    //             })
-    //             dispatch(foodListAction())
-    //         })
-    //         .catch(function (error) {
-    //             dispatch({
-    //                 type: types.FOOD_ADD_FAILED,
-    //                 error
-    //             })
-    //         });
-    // };
+    console.log("payload from action",payload);
+
+    return (dispatch) => {
+        // dispatch({
+        //     type: types.SIGN_UP_REQUEST,
+        // })
+
+        axios.post(config.SERVER_API_URL+"users",payload )
+            .then(function (response) {
+                dispatch({
+                    type: types.SIGN_UP_SUCCESS,
+                    response
+                })
+            })
+            .catch(function (error) {
+                dispatch({
+                    type: types.SIGN_UP_FAILED,
+                    error
+                })
+            });
+    };
 
 }
 
