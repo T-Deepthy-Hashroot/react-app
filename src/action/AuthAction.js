@@ -20,7 +20,7 @@ export const signupAction = (payload) => {
                     response
                 })
             })
-            .catch(function (error) {
+            .catch(function (error) { 
                 dispatch({
                     type: types.SIGN_UP_FAILED,
                     error
