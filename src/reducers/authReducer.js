@@ -23,6 +23,28 @@ const authReducer =   (state = INITIAL_STATE, action) => {
                     loading: false,
                     status: null
                 }
+
+                case types.LOGIN_REQUEST:
+            return {
+                data: [],
+                error: null,
+                loading: true,
+                status: null
+            }
+            case types.LOGIN_SUCCESS:
+                return {
+                    data: action.response.data,
+                    error: null,
+                    loading: false,
+                    status: action.response && action.response.status
+                }
+            case types.LOGIN_FAILED:
+                return {
+                    data: [],
+                    error: action.error,
+                    loading: false,
+                    status: null
+                }
         default:
             return state;
     }

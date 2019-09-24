@@ -23,7 +23,8 @@ class SignUp extends React.Component  {
         this.setState({[key]: value})
       }
       handleSubmit(event){
-         event.preventDefault();
+        //  event.preventDefault();
+         console.log("event",event);
          this.props.signUp(this.state);
       }
     render(){
@@ -49,7 +50,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 const mapStateToProps = (state, ownProps) => {
-  console.log("state from reducer" , state.main)
   return {
     signUpState: state.main.authReducer
   }
