@@ -14,7 +14,7 @@ class SignUp extends React.Component  {
           name: '',
           username: '',
           password: '',
-          passwordconfirmation: ''
+          password_confirmation: ''
         }
         this.valueChange = this.valueChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,10 +32,10 @@ class SignUp extends React.Component  {
                 <form className="col-lg-6 offset-lg-3 p-4">  
                   <h2>SignUp</h2>          
                   <SingleTextInput name="email" value={this.state.email} type="email" placeholder="email" valueChange={this.valueChange} label="Email" />
-                  <SingleTextInput name="name" value={this.state.firstName} type="text" placeholder="Name" valueChange={this.valueChange} label="Name" />
-                  <SingleTextInput name="username" value={this.state.lastName} type="text" placeholder="User Name" valueChange={this.valueChange} label="User Name" />
+                  <SingleTextInput name="name" value={this.state.name} type="text" placeholder="Name" valueChange={this.valueChange} label="Name" />
+                  <SingleTextInput name="username" value={this.state.username} type="text" placeholder="User Name" valueChange={this.valueChange} label="User Name" />
                   <SingleTextInput name="password" value={this.state.password} type="password" placeholder="Password" valueChange={this.valueChange} label="Password" />
-                  <SingleTextInput name="passwordconfirmation" value={this.state.passwordConfirmation} type="password" placeholder="Password Confirmation" valueChange={this.valueChange} label="Password Confirmation" />
+                  <SingleTextInput name="password_confirmation" value={this.state.password_confirmation} type="password" placeholder="Password Confirmation" valueChange={this.valueChange} label="Password Confirmation" />
                   <button className="btn btn-primary mt-2" type="submit" onClick={this.handleSubmit}>Sign Up</button>
                   <Link to="login" className="ml-2 mt-2">Login</Link>   
                 </form>
