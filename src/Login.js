@@ -19,7 +19,7 @@ class Login extends React.Component  {
         this.setState({[key]: value})
       }
       handleSubmit(event){
-        // event.preventDefault();
+        event.preventDefault();
         console.log("event",event);
         this.props.login(this.state);
      }

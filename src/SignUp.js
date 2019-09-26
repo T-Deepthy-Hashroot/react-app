@@ -23,7 +23,7 @@ class SignUp extends React.Component  {
         this.setState({[key]: value})
       }
       handleSubmit(event){
-        //  event.preventDefault();
+         event.preventDefault();
          console.log("event",event);
          this.props.signUp(this.state);
       }
