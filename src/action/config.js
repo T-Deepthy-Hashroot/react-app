@@ -1,4 +1,4 @@
 module.exports = {
-	SERVER_API_URL: 'https://rails-jwt.herokuapp.com',
-	LOGIN_API: 'https://rails-jwt.herokuapp.com/auth/login'
+	SERVER_API_URL: 'http://localhost:3001/',
+	LOGIN_API: 'http://localhost:3001/auth/login'
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import SignUp from './SignUp.js'
 import Login from './Login.js';
 import Landing from './layout/Landing';
+import SignUpConfirmation from './SignUpConfirmation'
 import 'bootstrap/dist/css/bootstrap.css';
 
 import './App.css';
@@ -15,7 +16,7 @@ class App extends React.Component {
                 <Route path="/landing" component={Landing} />
                 <Route path="/signup" component={SignUp} />
                 <Route path="/login" component={Login} />
-                  <Redirect from='/ ' to='/landing'/>
+                <Route path="/users/:confirmationtoken/confirm_email" component={SignUpConfirmation} />
               
             </Router>
             
