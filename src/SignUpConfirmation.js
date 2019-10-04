@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import React from 'react';
+import config from './action/config'
 import axios from 'axios'
 class SignUpConfirmation extends React.Component { 
     constructor(props){
         super(props);
-        axios.post('http://localhost:3001/users/confirm_signup', {
+        axios.post(config.SERVER_API_URL+"users/confirm_signup", {
           confirmation_token: this.props.match.params.confirmationtoken
          })
   .then(function (response) {

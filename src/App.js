@@ -17,7 +17,7 @@ class App extends React.Component {
                 <Route path="/signup" component={SignUp} />
                 <Route path="/login" component={Login} />
                 <Route path="/users/:confirmationtoken/confirm_email" component={SignUpConfirmation} />
-              
+                {/* <Redirect from='/ ' to='/landing'/> */}
             </Router>
             
 
